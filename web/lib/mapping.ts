@@ -10,7 +10,7 @@ const Trading212Mapping = {
   // commission transaction fee + finra fee
 };
 
-enum Mapping {
+export enum Mapping {
   Custom,
   Trading212,
 }
@@ -24,7 +24,7 @@ export const mapTrade = (csvTrade: CSVTrade, mapping: Mapping): Trade => {
 };
 
 export const mapTrading212 = (csvTrade: CSVTrade): Trade => {
-  const tradeType = csvTrade["Action"].endsWith("buy")
+  const tradeType = csvTrade["Action"]?.endsWith("buy")
     ? TradeType.Buy
     : TradeType.Sell;
 
@@ -33,7 +33,7 @@ export const mapTrading212 = (csvTrade: CSVTrade): Trade => {
     quantity: 0,
     date: new Date(),
     symbol: "",
-    name: "",
+    name: csvTrade["Name"],
     total: 1,
     type: tradeType,
   };
