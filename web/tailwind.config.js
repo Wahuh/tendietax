@@ -10,9 +10,10 @@ module.exports = {
       "text-primary": "var(--color-text-primary)",
       "text-secondary": "var(--color-text-secondary)",
       border: "var(--color-border)",
+      white: "white",
     },
     fontFamily: {
-      sans: ["aktiv-grotesk", ...defaultTheme.fontFamily.sans],
+      sans: ["Inter", ...defaultTheme.fontFamily.sans],
     },
     extend: {},
   },

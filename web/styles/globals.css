@@ -5,7 +5,11 @@
 :root {
   --color-primary: #080808;
   --color-secondary: #080808;
-  --color-text-primary: white;
+  --color-text-primary: black;
   --color-text-secondary: #343741;
   --color-border: rgb(211, 218, 230);
+}
+
+body {
+  background-color: #f6f6f8;
 }

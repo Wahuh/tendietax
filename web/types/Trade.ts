@@ -1,7 +1,7 @@
 interface Trade {
   commission: number;
   name: string;
-  date: Date;
+  date: string;
   quantity: number;
   // price: number;
   symbol: string;
